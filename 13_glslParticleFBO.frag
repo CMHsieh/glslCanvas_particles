@@ -28,7 +28,7 @@ float glow(float d, float str, float thickness){
     return thickness / pow(d, str);
 }
 
-const float r = 1.5, N = 50.; // width , number of worms
+const float r = 0.5, N = 150.; // width , number of worms
 
 void main()
 {
