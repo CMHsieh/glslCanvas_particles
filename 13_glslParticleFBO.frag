@@ -37,7 +37,7 @@ void main()
     vec2 R = iResolution.xy;
     vec4 O;                         //output
     
-    //不懂！利用R定值讀取FBO,讀到最右下圖檔pixel訊息，紅色色版為零,
+    //利用R定值讀取FBO,讀到最右下圖檔pixel訊息，紅色色版為零,
     if (T(R).x==0.) { U = abs(U/R*2.-1.); O  = vec4(max(U.x,U.y)>1.-r/R.y); O.w=0.; gl_FragColor=O; return;} // track window resize
 
 //--STEP1.初始粒子位置於第一列--------
