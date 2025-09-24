@@ -58,9 +58,9 @@ void main()
     for (float x=.5; x<=N; x++) {                          // --- draw heads
 
         vec4 P = T(vec2(x,.5));                            // head state: P, a, t 
-        if (P.w>0.) O += smoothstep(r,0., length(P.xy-U))  // draw head if active
-                         *(.4);   // coloring scheme (exp(-0.02*P.w))
-        //if (P.w>0.) O += glow(length( (P.xy-U)/R ), 1.4, 0.004)*(0.002)*vec4(0.9, 0.4, 0.1, 0.2);
+        //if (P.w>0.) O += smoothstep(r,0., length(P.xy-U))  // draw head if active
+        //                 *(.4);   // coloring scheme (exp(-0.02*P.w))
+        if (P.w>0.) O += glow(length( (P.xy-U)/R ), 1.4, 0.004)*(0.002)*vec4(0.9, 0.4, 0.1, 0.2);
     }
 
 //--STEP3.像素著色後，更新第一列粒子們新位置
